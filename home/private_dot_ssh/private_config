@@ -1,0 +1,13 @@
+Host alpi
+  HostName alpi.lan.al105.ch
+
+Host pradapi
+  HostName pradapi.lan.prada35.ch
+
+Host sv
+  HostName sv.lan.al105.ch
+
+Host mk
+  HostName mk.lan.105.ch
+  User {{ onepassword "op://HomeLab/Main Mikrotik Router (AL105)/admin-login" }} 
+
