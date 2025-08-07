@@ -3,6 +3,6 @@ if test (uname) = 'Darwin'
 end
 
 starship init fish | source
-starship preset tokyo-night -o ~/.config/starship.toml
-
+#starship preset tokyo-night -o ~/.config/starship.toml
+starship preset gruvbox-rainbow -o ~/.config/starship.toml
 abbr --add sv 'ssh sv'
