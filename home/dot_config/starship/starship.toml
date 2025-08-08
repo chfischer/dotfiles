@@ -1,0 +1,50 @@
+format = """
+[](fg:#1f77b4)\
+$username$hostname\
+[](fg:#1f77b4 bg:#9467bd)\
+$directory\
+[](fg:#9467bd bg:#2ca02c)\
+$git_branch$git_status\
+[](fg:#2ca02c bg:#ff7f0e)\
+$time\
+[](fg:#ff7f0e bg:black)\
+$character"""
+
+# Show username@hostname always
+[username]
+show_always = true
+style_user = "fg:white bg:#1f77b4"
+style_root = "fg:white bg:#1f77b4"
+format = "[$user@]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:white bg:#1f77b4"
+format = "[$hostname]($style)"
+
+[directory]
+style = "fg:white bg:#9467bd"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = ""
+style = "fg:black bg:#2ca02c"
+
+[git_status]
+format = "[ $all_status ]($style)"
+style = "fg:black bg:#2ca02c"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+time_format = "%H:%M:%S"
+style = "fg:black bg:#ff7f0e"
+
+[character]
+success_symbol = "[❯](fg:green bg:black)"
+error_symbol = "[❯](fg:red bg:black)"
+
+
