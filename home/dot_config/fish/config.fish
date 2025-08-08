@@ -2,7 +2,11 @@ if test (uname) = 'Darwin'
     eval "$(/opt/homebrew/bin/brew shellenv)"
 end
 
+
+set -x STARSHIP_CONFIG "~/.config/starship/starship.toml"
+
 starship init fish | source
-#starship preset tokyo-night -o ~/.config/starship.toml
-starship preset gruvbox-rainbow -o ~/.config/starship.toml
+zoxide init --cmd cd fish | source
+fzf --fish | source
+
 abbr --add sv 'ssh sv'
